@@ -69,7 +69,7 @@
 }
 
 .dast-s3 {
-    border: 5px solid #eb1ead !important;
+    border: 0px solid #eb1ead !important;
 }
 
 .dast-s4 {
@@ -82,7 +82,7 @@
 
 #about,
 #global-view,
-#crop-view {
+#crop-view #population-view {
     display: block;
     position: absolute;
     height: 100vh;
@@ -166,6 +166,23 @@
 
 .dast-crop-year-filter {
     height: 53vh;
+}
+
+.dast-population-kpi-top {
+    height: 20vh;
+}
+
+.dast-population-population-years,
+.dast-population-countries-population {
+    height: 40vh;
+}
+
+.dast-population-year-filter {
+    height: 80vh;
+}
+
+.dast-population-country-filter {
+    height: 100vh;
 }
 
 

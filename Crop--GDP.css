@@ -73,7 +73,7 @@
 }
 
 .dast-s4 {
-    border: 5px solid #e9d313 !important;
+    border: 0px solid #e9d313 !important;
 }
 
 .dast-s5 {
@@ -82,7 +82,9 @@
 
 #about,
 #global-view,
-#crop-view #population-view {
+#crop-view,
+#population-view,
+#economy-view {
     display: block;
     position: absolute;
     height: 100vh;
@@ -182,6 +184,23 @@
 }
 
 .dast-population-country-filter {
+    height: 100vh;
+}
+
+.dast-economy-kpi-top {
+    height: 20vh;
+}
+
+.dast-econmy-population-gdp,
+.dast-economy-gdp-years {
+    height: 40vh;
+}
+
+.dast-econmy-year-filter {
+    height: 80vh;
+}
+
+.dast-economy-country-filter {
     height: 100vh;
 }
 

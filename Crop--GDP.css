@@ -77,14 +77,15 @@
 }
 
 .dast-s5 {
-    border: 5px solid #57d5fc !important;
+    border: 0px solid #57d5fc !important;
 }
 
 #about,
 #global-view,
 #crop-view,
 #population-view,
-#economy-view {
+#economy-view,
+#crop-and-population {
     display: block;
     position: absolute;
     height: 100vh;
@@ -202,6 +203,18 @@
 
 .dast-economy-country-filter {
     height: 100vh;
+}
+
+.dast-cropopulation-charts {
+    height: 60vh;
+}
+
+.dast-cropopulation-kpi-bottom,
+.dast-cropopulation-year-filter,
+.dast-cropopulation-country-filter-1,
+.dast-cropopulation-country-filter-2,
+.dast-cropopulation-bottom-chart {
+    height: 40vh;
 }
 
 

@@ -7,9 +7,10 @@
 .qvplaceholder,
 .qvobject {
     flex: 1 1 auto;
-    height: 300px;
-    min-width: 400px;
-    margin: 45px 0 0 45px;
+    height: 30vh;
+    width: 100%;
+    /* min-width: 400px;
+    margin: 45px 0 0 45px; */
 }
 
 #popup {
@@ -51,8 +52,12 @@
     margin-right: 23px;
 }
 
+
+/* CUSTOM */
+
 .dast-intro {
-    border: 5px solid #c3534b !important;
+    border: 0px solid #c3534b !important;
+    /* display: block; */
 }
 
 .dast-s1 {
@@ -73,6 +78,42 @@
 
 .dast-s5 {
     border: 5px solid #57d5fc !important;
+}
+
+#about {
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.dast-hero-img,
+.dast-project-description {
+    height: 80vh;
+}
+
+.dast-web-link,
+.dast-hero-introduction {
+    padding-top: 1vh;
+    height: 20vh;
+}
+
+.dast-web-link div font {
+    cursor: pointer;
+    padding-top: 3vh;
+}
+
+.dast-hero-flag,
+.dast-hero-link {
+    height: 40vh;
+}
+
+.dast-hero-flag div img,
+.dast-hero-link div img {
+    padding-top: 5vh;
+    cursor: pointer;
 }
 
 

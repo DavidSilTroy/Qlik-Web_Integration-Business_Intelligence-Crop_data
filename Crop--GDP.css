@@ -61,7 +61,7 @@
 }
 
 .dast-s1 {
-    border: 5px solid #4b67c3 !important;
+    border: 0px solid #4b67c3 !important;
 }
 
 .dast-s2 {
@@ -80,7 +80,8 @@
     border: 5px solid #57d5fc !important;
 }
 
-#about {
+#about,
+#global-view {
     display: block;
     position: absolute;
     height: 100vh;
@@ -114,6 +115,27 @@
 .dast-hero-link div img {
     padding-top: 5vh;
     cursor: pointer;
+}
+
+.dast-production-population-years,
+.dast-production-gdp-years {
+    height: 45vh;
+}
+
+.dast-global-view-kpi {
+    height: 10vh;
+}
+
+.dast-global-view-year-filter {
+    height: 90vh;
+}
+
+.dast-global-view-map {
+    height: 40vh;
+}
+
+.dast-global-view-country-filter {
+    height: 60vh;
 }
 
 

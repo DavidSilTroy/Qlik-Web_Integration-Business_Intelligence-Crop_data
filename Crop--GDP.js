@@ -30,6 +30,8 @@ require(["js/qlik"], function(qlik) {
     var app = qlik.openApp('Crops-and-GDP.qvf', config);
 
     //get objects -- inserted here --
+	app.getObject('QV11','b2290a85-2282-49a5-ae34-7db3425164a7');
+	
 	app.getObject('QV48','myPE');
 	app.getObject('QV47','mnptMRX');
 	app.getObject('QV46','BVmJyp');
@@ -66,7 +68,7 @@ require(["js/qlik"], function(qlik) {
 	app.getObject('QV15','AVxcvsN');
 	app.getObject('QV14','uVJDq');
 	app.getObject('QV13','pvPZVW');
-	app.getObject('QV11','fa88f113-944d-4c97-9ea2-32fb6d9b3269');
+	
     app.getObject('QV10', 'fa88f113-944d-4c97-9ea2-32fb6d9b3269');
     app.getObject('QV12', 'ZNHAk');
 

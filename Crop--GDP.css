@@ -65,7 +65,7 @@
 }
 
 .dast-s2 {
-    border: 5px solid #2fce2f !important;
+    border: 0px solid #2fce2f !important;
 }
 
 .dast-s3 {
@@ -81,7 +81,8 @@
 }
 
 #about,
-#global-view {
+#global-view,
+#crop-view {
     display: block;
     position: absolute;
     height: 100vh;
@@ -136,6 +137,35 @@
 
 .dast-global-view-country-filter {
     height: 60vh;
+}
+
+.dast-crop-kpi-top {
+    height: 15vh;
+}
+
+.dast-crop-kpi-bottom {
+    height: 10vh;
+}
+
+.dast-crop-countries {
+    height: 100vh;
+}
+
+.dast-crop-country-yield {
+    height: 75vh;
+}
+
+.dast-crop-tones-hectares-years,
+.dast-crop-tones-name {
+    height: 37.5vh;
+}
+
+.dast-crop-crop-filter {
+    height: 22vh;
+}
+
+.dast-crop-year-filter {
+    height: 53vh;
 }
 
 

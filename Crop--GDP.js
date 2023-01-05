@@ -106,7 +106,7 @@ require(["js/qlik"], function(qlik) {
     }
 
     window.onload = () => {
-        console.log('Ready to Work!');
+        console.log('File ready!');
         btn.index = document.querySelector('button#btn-index');
         btn.about = document.querySelector('div#btn-about');
         btn.global = document.querySelector('a#btn-global');
@@ -157,6 +157,7 @@ require(["js/qlik"], function(qlik) {
 
         hideLoading();
         hideAll();
+        console.log('All ready!');
     };
 
     const showLoading = () => {
@@ -167,9 +168,11 @@ require(["js/qlik"], function(qlik) {
     }
     const showIndex = () => {
         section.index.classList.remove("d-none");
+        btn.index.classList.add("d-none");
     }
     const hideIndex = () => {
         section.index.classList.add("d-none");
+        btn.index.classList.remove("d-none");
     }
     const showAbout = () => {
         section.about.classList.remove("d-none");

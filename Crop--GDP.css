@@ -1,98 +1,109 @@
 .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 45px 45px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 45px 45px 0;
 }
 
 .qvplaceholder,
 .qvobject {
-    flex: 1 1 auto;
-    height: 30vh;
-    width: 100%;
-    /* min-width: 400px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 30vh;
+  width: 100%;
+  /* min-width: 400px;
     margin: 45px 0 0 45px; */
 }
 
 #popup {
-    background-color: #c3534b;
-    color: #FFFFFF;
-    position: fixed;
-    max-width: 250px;
-    padding: 10px;
-    margin: 10px;
-    bottom: 0;
-    right: 0;
-    display: none;
-    border-radius: 5px;
-    z-index: 6;
-    font-family: sans-serif;
+  background-color: #c3534b;
+  color: #FFFFFF;
+  position: fixed;
+  max-width: 250px;
+  padding: 10px;
+  margin: 10px;
+  bottom: 0;
+  right: 0;
+  display: none;
+  border-radius: 5px;
+  z-index: 6;
+  font-family: sans-serif;
 }
 
 .close {
-    cursor: pointer;
-    background: 0 0;
-    border: 0;
-    float: right;
-    font-size: 21px;
-    font-weight: 700;
-    line-height: 1;
-    color: #000;
-    text-shadow: 0 1px 0 #fff;
-    opacity: .2;
-    position: absolute;
-    right: 9px;
-    top: 7px;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  float: right;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .2;
+  position: absolute;
+  right: 9px;
+  top: 7px;
 }
 
 .close:hover {
-    opacity: .5;
+  opacity: .5;
 }
 
 #popupText {
-    margin-right: 23px;
+  margin-right: 23px;
 }
 
-
-/* CUSTOM */
-
+/* CUSTOM CSS by David A. Silva Troya (dast) */
 body {
-    overflow: hidden;
-    max-width: 100vw;
-    max-height: 100vh;
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 .dast-intro {
-    border: 0px solid #c3534b !important;
-    /* display: block; */
+  border: 0px solid #c3534b !important;
+  /* display: block; */
 }
 
 .dast-s1 {
-    border: 0px solid #4b67c3 !important;
+  border: 0px solid #4b67c3 !important;
 }
 
 .dast-s2 {
-    border: 0px solid #2fce2f !important;
+  border: 0px solid #2fce2f !important;
 }
 
 .dast-s3 {
-    border: 0px solid #eb1ead !important;
+  border: 0px solid #eb1ead !important;
 }
 
 .dast-s4 {
-    border: 0px solid #e9d313 !important;
+  border: 0px solid #e9d313 !important;
 }
 
 .dast-s5 {
-    border: 0px solid #57d5fc !important;
+  border: 0px solid #57d5fc !important;
 }
 
-.dast-btn-index {
-    position: absolute;
-    right: 2.2vw;
-    height: 35px;
-    width: 35px;
-    padding: 1px !important;
-    background-color: #57d5fc !important;
+#btn-index {
+  position: absolute;
+  top: -4vh;
+  right: 1vw;
+  height: 5vh;
+  width: 5vh;
+  padding: 1px !important;
+  background-color: #57d5fc !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 8;
+}
+
+#btn-index:hover {
+  top: 0;
 }
 
 #loading,
@@ -102,270 +113,306 @@ body {
 #population-view,
 #economy-view,
 #crop-and-population {
-    display: block;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    background-color: #fff;
-    z-index: 7;
-}
-
-#btn-index {
-    z-index: 8;
+  display: block;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(#a2f3fd, #c2f8ff, #dfdfdf);
+  z-index: 7;
 }
 
 #loading {
-    height: 100vh;
-    padding-top: 45vh;
-    z-index: 9;
+  height: 100vh;
+  padding-top: 45vh;
+  z-index: 9;
 }
 
 #index {
-    height: 100vh;
-    background-image: url(./imgs/holographic_world.gif);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 110vw 110vh;
-    color: #fff;
-    font-family: 'Work Sans', sans-serif;
-    z-index: 10;
-}
-
-.dast-title {
-    --c: #1dd3b01a;
-    text-shadow: 5px 5px var(--c), 1px 1px var(--c), 1.5px 1.5px var(--c), 2px 2px var(--c), 4px 4px 1.5px var(--c);
-    color: #8be4ff;
+  height: 100vh;
+  background-image: url(./imgs/holographic_world.gif);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 110vw 110vh;
+  color: #fff;
+  font-family: 'Work Sans', sans-serif;
+  z-index: 10;
 }
 
 #index nav {
-    position: absolute;
-    top: 11vh;
-    right: 50vw;
+  position: absolute;
+  top: 11vh;
+  right: 50vw;
 }
 
 #index nav ul {
-    list-style: none;
+  list-style: none;
 }
 
-#index nav ul li {
-    text-align: center;
-    border-radius: 2px;
-    --c: #1dd3b01a;
-    text-shadow: 5px 5px var(--c), 1px 1px var(--c), 1.5px 1.5px var(--c), 2px 2px var(--c), 4px 4px 1.5px var(--c);
-    border: 2px solid #1dd3b060;
-    transform: skew(-1deg);
-    transition: 0.3s;
-}
-
-#index nav ul li:hover {
-    text-align: center;
-    background-color: #dff1f74d;
-    border-radius: 2px;
-    --c: #1dd3b01a;
-    text-shadow: 5px 5px var(--c), 1px 1px var(--c), 1.5px 1.5px var(--c), 2px 2px var(--c), 4px 4px 1.5px var(--c);
-    border: 4px solid #57d5fc;
-    transform: skew(-15deg);
-}
-
-#index nav ul li a {
-    text-decoration: none;
-    /* color: #ffffffa0; */
-    color: #57d5fc;
+#index nav ul li:nth-child(1), #index nav ul li:nth-child(2), #index nav ul li:nth-child(3), #index nav ul li:nth-child(4), #index nav ul li:nth-child(5) {
+  width: 15vw;
+  position: absolute;
 }
 
 #index nav ul li:nth-child(1) {
-    width: 15vw;
-    position: absolute;
-    top: 15vh;
-    left: 22vw;
+  top: 15vh;
+  left: 22vw;
 }
 
 #index nav ul li:nth-child(2) {
-    width: 15vw;
-    position: absolute;
-    top: 25vh;
-    left: 24vw;
+  top: 25vh;
+  left: 24vw;
 }
 
 #index nav ul li:nth-child(3) {
-    width: 15vw;
-    position: absolute;
-    top: 35vh;
-    left: 25vw;
+  top: 35vh;
+  left: 25vw;
 }
 
 #index nav ul li:nth-child(4) {
-    width: 15vw;
-    position: absolute;
-    top: 45vh;
-    left: 24.5vw;
+  top: 45vh;
+  left: 24.5vw;
 }
 
 #index nav ul li:nth-child(5) {
-    width: 15vw;
-    position: absolute;
-    top: 55vh;
-    left: 23.5vw;
+  top: 55vh;
+  left: 23.5vw;
 }
 
-.dast-index-description {
-    width: 25vw;
-    color: #57d5fc;
-    position: absolute;
-    top: 24vh;
-    margin: auto 0;
+#index nav ul li a {
+  text-decoration: none;
+  color: #57d5fc;
 }
 
-.dast-hero-img,
-.dast-project-description {
-    height: 80vh;
+#index #btn-about {
+  width: 15vw;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
-.dast-web-link,
-.dast-hero-introduction {
-    padding-top: 1vh;
-    height: 20vh;
+#index #btn-about a {
+  text-decoration: none;
+  color: #57d5fc;
 }
 
-.dast-web-link div font {
-    cursor: pointer;
-    padding-top: 3vh;
+#index .dast-index-description {
+  width: 25vw;
+  color: #57d5fc;
+  position: absolute;
+  top: 24vh;
+  margin: auto 0;
 }
 
-.dast-hero-flag,
-.dast-hero-link {
-    height: 40vh;
+#about .dast-hero-img {
+  height: 91.4vh;
 }
 
-.dast-hero-flag div img,
-.dast-hero-link div img {
-    padding-top: 5vh;
-    cursor: pointer;
+#about .dast-web-link {
+  height: 7.4vh;
+  padding-top: 1.48vh;
 }
 
-.dast-production-population-years,
-.dast-production-gdp-years {
-    height: 45vh;
+#about .dast-web-link div font {
+  cursor: pointer;
+  padding-top: 3vh;
 }
 
-.dast-global-view-kpi {
-    height: 10vh;
+#about .dast-hero-introduction {
+  height: 19.4vh;
+  padding-top: 1.94vh;
 }
 
-.dast-global-view-year-filter {
-    height: 90vh;
+#about .dast-project-description {
+  height: 79.4vh;
+  padding: 0.8vh;
 }
 
-.dast-global-view-map {
-    height: 40vh;
+#about .dast-hero-flag {
+  height: 49.4vh;
 }
 
-.dast-global-view-country-filter {
-    height: 60vh;
+#about .dast-hero-flag div img {
+  padding-top: 1.5vh;
+  cursor: pointer;
 }
 
-.dast-crop-kpi-top {
-    height: 15vh;
+#about .dast-hero-link {
+  height: 29.4vh;
 }
 
-.dast-crop-kpi-bottom {
-    height: 10vh;
+#about .dast-hero-link div img {
+  padding-top: 1.5vh;
+  cursor: pointer;
 }
 
-.dast-crop-countries {
-    height: 100vh;
+#global-view .dast-production-population-years,
+#global-view .dast-production-gdp-years {
+  height: 44.4vh;
 }
 
-.dast-crop-country-yield {
-    height: 75vh;
+#global-view .dast-global-view-kpi {
+  height: 9.4vh;
 }
 
-.dast-crop-tones-hectares-years,
-.dast-crop-tones-name {
-    height: 37.5vh;
+#global-view .dast-global-view-year-filter {
+  height: 89.4vh;
 }
 
-.dast-crop-crop-filter {
-    height: 22vh;
+#global-view .dast-global-view-map {
+  height: 39.4vh;
 }
 
-.dast-crop-year-filter {
-    height: 53vh;
+#global-view .dast-global-view-country-filter {
+  height: 59.4vh;
 }
 
-.dast-population-kpi-top {
-    height: 20vh;
+#crop-view .dast-crop-kpi-top {
+  height: 14.4vh;
 }
 
-.dast-population-population-years,
-.dast-population-countries-population {
-    height: 40vh;
+#crop-view .dast-crop-kpi-bottom {
+  height: 9.4vh;
 }
 
-.dast-population-year-filter {
-    height: 80vh;
+#crop-view .dast-crop-countries {
+  height: 99.4vh;
 }
 
-.dast-population-country-filter {
-    height: 100vh;
+#crop-view .dast-crop-country-yield {
+  height: 74.4vh;
 }
 
-.dast-economy-kpi-top {
-    height: 20vh;
+#crop-view .dast-crop-tones-hectares-years,
+#crop-view .dast-crop-tones-name {
+  height: 36.9vh;
 }
 
-.dast-econmy-population-gdp,
-.dast-economy-gdp-years {
-    height: 40vh;
+#crop-view .dast-crop-crop-filter {
+  height: 21.4vh;
 }
 
-.dast-econmy-year-filter {
-    height: 80vh;
+#crop-view .dast-crop-year-filter {
+  height: 52.4vh;
 }
 
-.dast-economy-country-filter {
-    height: 100vh;
+#population-view .dast-population-kpi-top {
+  height: 19.4vh;
 }
 
-.dast-cropopulation-charts {
-    height: 60vh;
+#population-view .dast-population-population-years,
+#population-view .dast-population-countries-population {
+  height: 39.4vh;
 }
 
-.dast-cropopulation-kpi-bottom,
-.dast-cropopulation-year-filter,
-.dast-cropopulation-country-filter-1,
-.dast-cropopulation-country-filter-2,
-.dast-cropopulation-bottom-chart {
-    height: 40vh;
+#population-view .dast-population-year-filter {
+  height: 79.4vh;
 }
 
+#population-view .dast-population-country-filter {
+  height: 99.4vh;
+}
+
+#economy-view .dast-economy-kpi-top {
+  height: 19.4vh;
+}
+
+#economy-view .dast-econmy-population-gdp,
+#economy-view .dast-economy-gdp-years {
+  height: 39.4vh;
+}
+
+#economy-view .dast-econmy-year-filter {
+  height: 79.4vh;
+}
+
+#economy-view .dast-economy-country-filter {
+  height: 99.4vh;
+}
+
+#crop-and-population .dast-cropopulation-charts {
+  height: 59.4vh;
+}
+
+#crop-and-population .dast-cropopulation-kpi-bottom,
+#crop-and-population .dast-cropopulation-year-filter,
+#crop-and-population .dast-cropopulation-country-filter-1,
+#crop-and-population .dast-cropopulation-country-filter-2,
+#crop-and-population .dast-cropopulation-bottom-chart {
+  height: 39.4vh;
+}
+
+/*General classes*/
+.dast-shadow-text {
+  text-shadow: 5px 5px #1dd3b01a, 1px 1px #1dd3b01a, 1.5px 1.5px #1dd3b01a, 2px 2px #1dd3b01a, 4px 4px 1.5px #1dd3b01a;
+}
+
+.dast-title {
+  color: #8be4ff;
+}
+
+.dast-main-btn {
+  text-align: center;
+  border-radius: 2px;
+  border: 2px solid #1dd3b060;
+  -webkit-transform: skew(-1deg);
+          transform: skew(-1deg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.dast-main-btn:hover {
+  background-color: #dff1f74d;
+  border: 4px solid #57d5fc;
+  -webkit-transform: skew(-15deg);
+          transform: skew(-15deg);
+}
+
+.dast-bg-chart {
+  background: radial-gradient(#e9e7e7, #f1f1f1, #ffffff);
+  margin: 0.3vh auto;
+  border-radius: 3px;
+}
 
 /* loading animation */
-
 .lds-dual-ring {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
 }
 
 .lds-dual-ring:after {
-    content: " ";
-    display: block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border-radius: 50%;
-    border: 6px solid #fff;
-    border-color: rgb(79, 199, 255) transparent rgb(79, 199, 255) transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #4fc7ff transparent #4fc7ff transparent;
+  -webkit-animation: lds-dual-ring 1.2s linear infinite;
+          animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @keyframes lds-dual-ring {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
+/*# sourceMappingURL=Crop--GDP.css.map */

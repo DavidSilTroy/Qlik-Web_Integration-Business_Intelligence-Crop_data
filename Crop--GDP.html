@@ -17,20 +17,102 @@
     <script src="../../resources/assets/external/requirejs/require.js"></script>
     <script src="Crop--GDP.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 </head>
 
 <!-- <body style="overflow: auto"> -->
 
 <body>
-    <!-- <section id="loading">
-        <div class="lds-dual-ring text-center"></div>
+
+    <section id="loading">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="lds-dual-ring"></div>
+            </div>
+        </div>
     </section>
 
     <section id="index">
-        <h1 class="text-center"> Hola amigo otra vez!</h1>
-    </section> -->
+        <h1 class="text-center pt-2 dast-title"> Business Intelligence</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#global" id="btn-global">
+                        <h3>
+                            Global view
+                        </h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#crops" id="btn-crops">
+                        <h3>
+                            Crops view
+                        </h3>
+                    </a>
+                </li>
 
-    <section id="about" class="d-none">
+                <li>
+                    <a href="#population" id="btn-population">
+                        <h3>
+                            Population view
+                        </h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#economy" id="btn-economy">
+                        <h3>
+                            Economy view
+                        </h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#cropopulation" id="btn-cropopulation">
+                        <h3>
+                            Crops and Population
+                        </h3>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="dast-index-description px-3" id="btn-about">
+            <p>
+                The Agriculture from Cereals and Grains are one of the most important foods for the human being around the world. With the data among the years of the production in different countries is possible to know which one is in the top of production in the latest
+                year but also see how this production was evolving along the years.
+            </p>
+            <p>
+                The human population marks an important point in the production of this Cereals and Grains, the goal has been always to have more than enough food for the people. But at the same time, it is the people the responsible of achieve this goal.
+            </p>
+            <p>
+                So, we can say with more people there is more production, but at the same time more consumption. However, it is also possible to have countries which are not following this pattern and to have an idea of the situation of the country we can also see its
+                Gross Domestic Product.
+            </p>
+            <p>
+                This information can be useful for the governments and people from the countries in this dataset, to understand how the population is growing and with it the consumption of food. Countries with low production will need to import the production from other
+                countries.
+            </p>
+            <p>
+                <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD" target="_blank" rel="noopener noreferrer">
+                    Link to the GPD per capita, PPP1990 to 2020
+                </a>
+            </p>
+            <p>
+                <a href="https://data.worldbank.org/indicator/SP.POP.TOTL" target="_blank" rel="noopener noreferrer">
+                    Link to the Total WorldPopulation from 1960 to 2020
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <button id="btn-index" type="button" class="btn dast-btn-index">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"></path>
+        </svg>
+    </button>
+
+    <section id="about">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-4 text-center">
@@ -74,7 +156,7 @@
         </div>
     </section>
 
-    <section id="global-view" class="d-none">
+    <section id="global-view">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-8">
@@ -112,7 +194,7 @@
         </div>
     </section>
 
-    <section id="crop-view" class="d-none">
+    <section id="crop-view">
         <div class="row">
             <div class="col-10">
                 <div class="row">
@@ -155,7 +237,7 @@
         </div>
     </section>
 
-    <section id="population-view" class="d-none">
+    <section id="population-view">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-8">
@@ -190,7 +272,7 @@
 
     </section>
 
-    <section id="economy-view" class="d-none">
+    <section id="economy-view">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-8">
@@ -223,7 +305,8 @@
             </div>
         </div>
     </section>
-    <section id="crop-and-population" class="d-none">
+
+    <section id="crop-and-population">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">

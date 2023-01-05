@@ -85,6 +85,7 @@ require(["js/qlik"], function(qlik) {
     app.getObject('QV02', 'pwPEzj');
 
 
+    //My turn!
     var btn = {
         index: null,
         about: null,
@@ -93,6 +94,7 @@ require(["js/qlik"], function(qlik) {
         population: null,
         economy: null,
         cropopulation: null,
+        globalFilter: null,
     }
     var section = {
         index: null,
@@ -114,6 +116,7 @@ require(["js/qlik"], function(qlik) {
         btn.population = document.querySelector('a#btn-population');
         btn.economy = document.querySelector('a#btn-economy');
         btn.cropopulation = document.querySelector('a#btn-cropopulation');
+        btn.globalFilter = document.querySelector('button#btn-global-filters');
 
         section.index = document.querySelector('section#index');
         section.loading = document.querySelector('section#loading');
@@ -153,7 +156,12 @@ require(["js/qlik"], function(qlik) {
             hideIndex();
             showAbout();
         });
-
+        btn.globalFilter.addEventListener("click", () => {
+            document.querySelector('div#global-filters').classList.toggle("dast-w-filter")
+            document.querySelector('div#global-charts').classList.toggle("dast-w-charts")
+            app.getObject('QV13', 'pvPZVW');
+            app.getObject('QV12', 'ZNHAk');
+        });
 
         hideLoading();
         hideAll();

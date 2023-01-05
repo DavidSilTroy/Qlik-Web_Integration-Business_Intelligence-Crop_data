@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
 </head>
 
 <!-- <body style="overflow: auto"> -->
@@ -74,7 +74,7 @@
     <section id="global-view">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-8">
+                <div id="global-charts" class="col-8">
                     <div class="row">
                         <div class="col-12">
                             <div id="QV13" class="dast-bg-chart dast-production-population-years dast-s1"></div>
@@ -93,13 +93,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div id="global-filters" class="col-4">
+                    <div class="dast-for-btn">
+                        <button id="btn-global-filters" class="dast-btn-filter"></button>
+                    </div>
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-4 pe-0">
                             <div id="QV16" class="dast-bg-chart dast-global-view-kpi dast-s1"></div>
                             <div id="QV15" class="dast-bg-chart dast-global-view-year-filter dast-s1"></div>
                         </div>
-                        <div class="col-8">
+                        <div class="col-8 ps-1">
                             <div id="QV09" class="dast-bg-chart dast-global-view-country-filter dast-s1"></div>
                             <div id="QV08" class="dast-bg-chart dast-global-view-map dast-s1"></div>
                         </div>
@@ -113,22 +116,22 @@
         <div class="row">
             <div class="col-10">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-4 ps-0 ">
                         <div id="QV18" class="dast-bg-chart dast-crop-kpi-top dast-s2"></div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 ps-0">
                         <div id="QV19" class="dast-bg-chart dast-crop-kpi-top dast-s2"></div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 ps-0">
                         <div id="QV17" class="dast-bg-chart dast-crop-kpi-top dast-s2"></div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 ps-0">
                         <div id="QV21" class="dast-bg-chart dast-crop-kpi-bottom dast-s2"></div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 ps-0">
                         <div id="QV22" class="dast-bg-chart dast-crop-kpi-bottom dast-s2"></div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 ps-0">
                         <div id="QV23" class="dast-bg-chart dast-crop-kpi-bottom dast-s2"></div>
                     </div>
                 </div>
@@ -136,7 +139,7 @@
                     <div class="col-5">
                         <div id="QV27" class="dast-bg-chart dast-crop-country-yield dast-s2"></div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 ps-0">
                         <div id="QV24" class="dast-bg-chart dast-crop-tones-hectares-years dast-s2"></div>
                         <div id="QV28" class="dast-bg-chart dast-crop-tones-name dast-s2"></div>
                     </div>
@@ -160,7 +163,7 @@
                         <div class="col-6">
                             <div id="QV31" class="dast-bg-chart dast-population-kpi-top dast-s3"></div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 ps-0">
                             <div id="QV32" class="dast-bg-chart dast-population-kpi-top dast-s3"></div>
                         </div>
                         <div class="col-12">
@@ -195,7 +198,7 @@
                         <div class="col-6">
                             <div id="QV38" class="dast-bg-chart dast-economy-kpi-top dast-s4"></div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 ps-0">
                             <div id="QV40" class="dast-bg-chart dast-economy-kpi-top dast-s4"></div>
                         </div>
                         <div class="col-12">

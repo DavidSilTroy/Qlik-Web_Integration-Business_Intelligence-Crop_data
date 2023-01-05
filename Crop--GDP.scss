@@ -335,6 +335,36 @@ body {
 
 /*General classes*/
 
+.dast-w-filter {
+    width: 0.1vw !important;
+}
+
+.dast-w-charts {
+    width: 98.8vw !important;
+}
+
+.dast-for-btn {
+    position: absolute;
+}
+
+.dast-btn-filter {
+    position: absolute;
+    background-color: #65bea1b6;
+    border: rgba(0, 0, 0, 0.103);
+    left: -2vh;
+    width: 1.7vh;
+    height: $dast-max-height;
+    transition: 300ms;
+    &:hover {
+        background-color: #86f4f879;
+    }
+}
+
+.dast-row-right {
+    padding-right: 0;
+    margin-right: 0;
+}
+
 .dast-shadow-text {
     $color-s1: #1dd3b01a;
     text-shadow: 5px 5px $color-s1, 1px 1px $color-s1, 1.5px 1.5px $color-s1, 2px 2px $color-s1, 4px 4px 1.5px $color-s1;

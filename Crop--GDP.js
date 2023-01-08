@@ -1,22 +1,63 @@
 /*
- * Basic responsive mashup template
- * @owner Enter you name here (xxx)
+ * Basic responsive mashup template modified by
+ * @David Silva Troya
  */
 /*
  *    Fill in host and port for Qlik engine
  */
 
+
+
+//My Variables!
+var obj = {
+    progressBar: null,
+}
+var btn = {
+    index: null,
+    about: null,
+    global: null,
+    crops: null,
+    population: null,
+    economy: null,
+    cropopulation: null,
+    globalFilter: null,
+}
+var section = {
+    index: null,
+    loading: null,
+    about: null,
+    global: null,
+    crops: null,
+    population: null,
+    economy: null,
+    cropopulation: null,
+}
+
+//Just a load function to show progress
+const loadProgressBar = (porcentage) => {
+    console.log(`loading ${porcentage}%`)
+    if (obj.progressBar == null) {
+        obj.progressBar = document.querySelector('div#dast-progress-bar');
+    } else {
+        obj.progressBar.style.width = `${porcentage}%`;
+    }
+}
+
+
+loadProgressBar(20);
 var prefix = window.location.pathname.substr(0, window.location.pathname.toLowerCase().lastIndexOf("/extensions") + 1);
+loadProgressBar(30);
 var config = {
     host: window.location.hostname,
     prefix: prefix,
     port: window.location.port,
     isSecure: window.location.protocol === "https:"
 };
+loadProgressBar(50);
 require.config({
     baseUrl: (config.isSecure ? "https://" : "http://") + config.host + (config.port ? ":" + config.port : "") + config.prefix + "resources"
 });
-
+loadProgressBar(60);
 require(["js/qlik"], function(qlik) {
     qlik.on("error", function(error) {
         $('#popupText').append(error.message + "<br>");
@@ -29,16 +70,19 @@ require(["js/qlik"], function(qlik) {
     //callbacks -- inserted here --
     //open apps -- inserted here --
     var app = qlik.openApp('Crops-and-GDP.qvf', config);
-
+    loadProgressBar(65);
     //get objects -- inserted here --
-    app.getObject('QV11', 'b2290a85-2282-49a5-ae34-7db3425164a7');
-
-    app.getObject('QV48', 'myPE');
-    app.getObject('QV47', 'mnptMRX');
     app.getObject('QV46', 'BVmJyp');
     app.getObject('QV45', 'GbxMSMu');
+    app.getObject('QV47', 'mnptMRX');
     app.getObject('QV44', 'HPzsNNn');
     app.getObject('QV43', 'VauaFEd');
+    app.getObject('QV48', 'myPE');
+
+
+    app.getObject('QV11', 'b2290a85-2282-49a5-ae34-7db3425164a7');
+
+
     app.getObject('QV42', 'fyEzDpJ');
     app.getObject('QV41', 'dbhgLL');
     app.getObject('QV40', 'kpamAt');
@@ -83,29 +127,11 @@ require(["js/qlik"], function(qlik) {
     app.getObject('QV04', 'MBVMkU');
     app.getObject('QV03', 'AMKdmEv');
     app.getObject('QV02', 'pwPEzj');
+    loadProgressBar(90);
 
 
-    //My turn!
-    var btn = {
-        index: null,
-        about: null,
-        global: null,
-        crops: null,
-        population: null,
-        economy: null,
-        cropopulation: null,
-        globalFilter: null,
-    }
-    var section = {
-        index: null,
-        loading: null,
-        about: null,
-        global: null,
-        crops: null,
-        population: null,
-        economy: null,
-        cropopulation: null,
-    }
+
+
 
     window.onload = () => {
         console.log('File ready!');
@@ -126,6 +152,7 @@ require(["js/qlik"], function(qlik) {
         section.population = document.querySelector('section#population-view');
         section.economy = document.querySelector('section#economy-view');
         section.cropopulation = document.querySelector('section#crop-and-population');
+
         console.log(btn);
 
         btn.index.addEventListener("click", () => {
@@ -163,9 +190,11 @@ require(["js/qlik"], function(qlik) {
             app.getObject('QV12', 'ZNHAk');
         });
 
+        loadProgressBar(99);
         hideLoading();
         hideAll();
         console.log('All ready!');
+        loadProgressBar(100);
     };
 
     const showLoading = () => {
@@ -227,6 +256,7 @@ require(["js/qlik"], function(qlik) {
         hidePopulation()
         showIndex();
     }
+
 
 
 
